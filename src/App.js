@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import $ from 'jquery';
+import sound from './purple-rain.mp3';
 
 class App extends Component {
   componentDidMount() {
@@ -185,7 +186,7 @@ class App extends Component {
           </div>
         </div>
         <audio autoPlay="autoplay">
-          <source src="./purple-rain.mp3" type="audio/mp3"></source>
+          <source src={sound} type="audio/mp3"></source>
         </audio>
       </div>
     );
