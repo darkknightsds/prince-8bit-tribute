@@ -1,28 +1,30 @@
-.App {
-  text-align: center;
+.wrapper {
+  background-color: #380B41;
 }
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+canvas, .c2 {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  background: linear-gradient(to bottom, #380B41 70%,#515175 100%);
+  background-image: url(./prince.gif);
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: animatedBackground 40s linear infinite;
 }
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.reflection-wrapper {
+  max-height:50px;
+  overflow: hidden;
 }
-
-.App-title {
-  font-size: 1.5em;
+.c2 {
+  transform: rotate3d(1, 0, 0, 0deg) rotate3d(0, 1, 0, 180deg) rotate3d(0, 0, 1, 180deg);
+  backface-visibility: visible;
+  opacity: .4;
+  background-color: gray;
+  filter: blur(1px);
+  z-index: 15;
+  position: relative;
 }
-
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+@keyframes animatedBackground {
+	from { background-position: -30% 0; }
+	to { background-position: 130% 0; }
 }
