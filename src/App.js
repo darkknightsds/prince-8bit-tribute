@@ -185,7 +185,7 @@ class App extends Component {
           </div>
         </div>
         <audio autoPlay="autoplay">
-          <source src="../purple-rain.mp3" type="audio/mp3"></source>
+          <source src="./purple-rain.mp3" type="audio/mp3"></source>
         </audio>
       </div>
     );
